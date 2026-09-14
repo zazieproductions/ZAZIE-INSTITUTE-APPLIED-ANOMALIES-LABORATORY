@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pages:dev": "wrangler pages dev dist",
+    "deploy": "npm run build && wrangler pages deploy dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
