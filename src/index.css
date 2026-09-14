@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-serif: 'Newsreader', Georgia, serif;
+
+    /* Theme colors - Dark Lab Terminal (Default) */
+    --bg-primary: #121415;
+    --bg-secondary: #1a1d1e;
+    --bg-tertiary: #222628;
+    --border-color: #2e3437;
+    --border-accent: #3d454a;
+    --text-primary: #e8e4d9;
+    --text-muted: #9ba1a6;
+    --text-dim: #686f73;
+    --accent-green: #3d6051;
+    --accent-green-bright: #4e7a67;
+    --accent-burgundy: #803544;
+    --accent-burgundy-bright: #a04255;
+    --accent-amber: #a88338;
+    --paper-grid: rgba(232, 228, 217, 0.05);
+  }
+
+  /* Paper Archive Theme Overrides */
+  body.theme-paper {
+    --bg-primary: #f4f1ea;
+    --bg-secondary: #e8e4d9;
+    --bg-tertiary: #dcd7ca;
+    --border-color: #c8c2b3;
+    --border-accent: #a8a190;
+    --text-primary: #1a1c1d;
+    --text-muted: #4e5356;
+    --text-dim: #787f84;
+    --accent-green: #2d4a3e;
+    --accent-green-bright: #1f362d;
+    --accent-burgundy: #6b2d38;
+    --accent-burgundy-bright: #52202a;
+    --accent-amber: #806020;
+    --paper-grid: rgba(26, 28, 29, 0.06);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom typography classes */
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Technical grid background */
+.bg-tech-grid {
+  background-image: linear-gradient(to right, var(--paper-grid) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--paper-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-tech-dots {
+  background-image: radial-gradient(var(--paper-grid) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Custom scrollbar for lab terminal feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-green);
+}
+
+/* Print Styles for Research Dossiers */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
