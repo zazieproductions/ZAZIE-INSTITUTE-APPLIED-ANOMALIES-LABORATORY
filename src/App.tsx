@@ -15,6 +15,8 @@ import { Exhibitions } from './pages/Exhibitions';
 import { Timeline } from './pages/Timeline';
 import { ArchiveSearch } from './pages/ArchiveSearch';
 import { Policies } from './pages/Policies';
+import { Founder } from './pages/Founder';
+import { About } from './pages/About';
 import { audioApparatus } from './lib/audioEngine';
 
 // Scroll to top on route navigation
@@ -64,6 +66,8 @@ export function App() {
         <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Routes>
             <Route path="/" element={<Overview />} />
+            <Route path="/founder" element={<Founder />} />
+            <Route path="/about" element={<About />} />
             <Route path="/prototypes" element={<PrototypeIndex />} />
             <Route path="/prototypes/:id" element={<PrototypeDetail />} />
             <Route path="/patents" element={<PatentOffice />} />

@@ -7,6 +7,9 @@ import { logsData } from '../data/logs';
 import { papersData } from '../data/papers';
 import { audioApparatus } from '../lib/audioEngine';
 import { AudioVisualizer } from '../components/AudioVisualizer';
+import { Seo } from '../seo/Seo';
+import { HOME_METADATA } from '../seo/metadata';
+import { organizationSchema, websiteSchema, zazieProductionsSchema, personSchema } from '../seo/schema';
 
 export const Overview: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -31,6 +34,18 @@ export const Overview: React.FC = () => {
 
   return (
     <div className="space-y-12">
+      <Seo
+        title={HOME_METADATA.title}
+        description={HOME_METADATA.description}
+        path={HOME_METADATA.path}
+        schemas={[
+          organizationSchema(),
+          websiteSchema(),
+          zazieProductionsSchema(),
+          personSchema(),
+        ]}
+      />
+
       {/* Hero Institutional Monograph Header */}
       <section className="border border-[var(--border-accent)] bg-[var(--bg-secondary)] rounded-md p-6 sm:p-10 relative overflow-hidden bg-tech-dots">
         <div className="max-w-4xl space-y-4">
@@ -48,7 +63,7 @@ export const Overview: React.FC = () => {
           </p>
 
           <p className="font-mono-tech text-xs text-[var(--text-dim)] leading-relaxed max-w-3xl">
-            Established in 2021 as a five-year non-commercial speculative inquiry. Operating across 5 research divisions with 120+ material prototype records, 75+ speculative patent dossiers, 250+ lab logs, and longform technical monographs.
+            Founded by Zazie Kanwar-Torge and operated by Zazie Productions LLC, the Institute was established in 2021 as a five-year non-commercial speculative inquiry. Operating across 5 research divisions with 120+ material prototype records, 75+ speculative patent dossiers, 250+ lab logs, and longform technical monographs.
           </p>
 
           {/* Key Archive Statistics Banner */}

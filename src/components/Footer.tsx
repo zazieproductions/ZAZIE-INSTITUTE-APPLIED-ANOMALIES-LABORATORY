@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             ZAZIE INSTITUTE (ZIAA)
           </div>
           <p className="text-[11px] text-[var(--text-dim)] leading-relaxed mb-4">
-            Independent laboratory for experimental audio technologies, creative tools, speculative patents, perceptual interfaces, signal archaeology, and public listening infrastructure.
+            Independent laboratory for experimental audio technologies, creative tools, speculative patents, perceptual interfaces, signal archaeology, and public listening infrastructure. Founded by <NavLink to="/founder" className="text-[var(--text-muted)] hover:text-[var(--accent-green-bright)]">Zazie Kanwar-Torge</NavLink>.
           </p>
           <div className="text-[10px] text-[var(--text-dim)]">
             Catalog Release: v5.2.0 (2026 Edition)<br />
@@ -61,6 +61,8 @@ export const Footer: React.FC = () => {
             Archive Resources
           </div>
           <ul className="space-y-2 text-[11px]">
+            <li><NavLink to="/about" className="hover:text-[var(--accent-green)] transition-colors">About the Institute</NavLink></li>
+            <li><NavLink to="/founder" className="hover:text-[var(--accent-green)] transition-colors">Founder: Zazie Kanwar-Torge</NavLink></li>
             <li><NavLink to="/patents" className="hover:text-[var(--accent-green)] transition-colors">Speculative Patent Office</NavLink></li>
             <li><NavLink to="/instruments" className="hover:text-[var(--accent-green)] transition-colors">Live Sound Experiments</NavLink></li>
             <li><NavLink to="/papers" className="hover:text-[var(--accent-green)] transition-colors">Technical Papers (Zazie Monographs)</NavLink></li>
