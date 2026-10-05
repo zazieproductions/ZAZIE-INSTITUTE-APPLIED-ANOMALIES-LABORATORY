@@ -3,6 +3,8 @@ import { useSearchParams, NavLink } from 'react-router-dom';
 import { BookOpen, Search, Download, Copy, Check, ExternalLink, Calendar, User } from 'lucide-react';
 import { papersData } from '../data/papers';
 import { TechnicalPaper } from '../types/archive';
+import { Seo } from '../seo/Seo';
+import { PAPERS_METADATA } from '../seo/metadata';
 
 export const Papers: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -31,6 +33,12 @@ export const Papers: React.FC = () => {
 
   return (
     <div className="space-y-8 font-mono-tech">
+      <Seo
+        title={PAPERS_METADATA.title}
+        description={PAPERS_METADATA.description}
+        path={PAPERS_METADATA.path}
+      />
+
       {/* Header */}
       <div className="border-b border-[var(--border-color)] pb-6 space-y-2">
         <div className="flex items-center space-x-2 text-xs text-[var(--accent-green-bright)] uppercase tracking-widest font-bold">

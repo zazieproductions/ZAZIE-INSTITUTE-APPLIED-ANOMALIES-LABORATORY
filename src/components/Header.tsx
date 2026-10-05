@@ -11,6 +11,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, openSearch, isAudioActive }) => {
   const navItems = [
+    { label: 'About', path: '/about' },
+    { label: 'Founder', path: '/founder' },
     { label: 'Prototypes', path: '/prototypes' },
     { label: 'Patents', path: '/patents' },
     { label: 'Instruments', path: '/instruments' },

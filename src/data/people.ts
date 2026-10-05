@@ -1,5 +1,14 @@
 import { Person } from '../types/archive';
 
+/**
+ * ZIAA Archive Personnel
+ * 
+ * IMPORTANT: These are institutional archive personas representing the
+ * research collective. They are NOT real-world founders or legal officers.
+ * 
+ * The real-world founder of ZIAA is Zazie Kanwar-Torge.
+ * See src/seo/entities.ts for canonical entity definitions.
+ */
 export const peopleData: Person[] = [
   {
     id: 'PERSON-001',
